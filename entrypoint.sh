@@ -33,18 +33,18 @@ echo "pwd=[$(pwd)]"
 ###############
 # Build
 ###############
-echo '[INFO] Start to build Gitbook static files...'
+echo '[INFO] Start to build HonKit static files...'
 
 ls -al
-cp -rf "$BOOK_DIR"/* /gitbook/
-cd /gitbook || exit
+cp -rf "$BOOK_DIR"/* /honkit/
+cd /honkit || exit
 cd - || exit
-sh /root/custom-entrypoint.sh "honkit build"
+honkit build
 checkIfErr
-ls -al /gitbook/_book
+ls -al /honkit/_book
 checkIfErr
-cp -rf /gitbook/_book "$BOOK_DIR"/
-echo '[INFO] Finished to build Gitbook static files.'
+cp -rf /honkit/_book "$BOOK_DIR"/
+echo '[INFO] Finished to build HonKit static files.'
 ls -al
 
 ###############
@@ -62,7 +62,7 @@ git checkout -b gh-pages
 checkIfErr
 cd - || exit
 
-echo '[INFO] Copy GitBook output pages...'
+echo '[INFO] Copy HonKit output pages...'
 ls -al
 cp -rf "$GH_PAGES_FOLDER"/.git ../dot_git_temp
 rm -rf "$GH_PAGES_FOLDER"

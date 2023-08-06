@@ -1,7 +1,4 @@
-FROM node:lts
-
-# Install HonKit
-RUN npm install -g honkit
+FROM honkit/honkit:latest
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
