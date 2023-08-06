@@ -1,0 +1,9 @@
+name: 'Automatically Build & Publish HonKit'
+description: 'Build HonKit files and deploy to GitHub Pages'
+author: 'carry0987'
+branding:
+  icon: 'book'
+  color: 'blue'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
