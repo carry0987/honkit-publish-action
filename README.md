@@ -1,5 +1,7 @@
 # GitHub Action for Automatically Build and Publish HonKit
 
+# On Going
+
 ## Introduction
 This GitHub Action is used to build HonKit static site files and deploy to GitHub Pages via gh-pages branch
 
@@ -26,5 +28,5 @@ jobs:
     - name: Checkout 🛎️
       uses: actions/checkout@v3.5.3
     - name: Build and Deploy 🚀
-      uses: carry0987/honkit-publish-action@v1.0.2
+      uses: carry0987/honkit-publish-action@v1.0.0
 ```
