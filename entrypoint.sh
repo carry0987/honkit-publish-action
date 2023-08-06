@@ -39,6 +39,7 @@ ls -al
 cp -rf "$BOOK_DIR"/* /honkit/
 cd /honkit || exit
 cd - || exit
+npm install
 honkit build
 checkIfErr
 ls -al /honkit/_book

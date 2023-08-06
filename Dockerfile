@@ -1,8 +1,7 @@
 FROM honkit/honkit:latest
 
-RUN mkdir /honkit
-
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+RUN npm install gitbook-plugin -g
 
 ENTRYPOINT ["/entrypoint.sh"]
