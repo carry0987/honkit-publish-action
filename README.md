@@ -26,7 +26,9 @@ jobs:
       BOOK_DIR    : your_book_sources_folder_name
     steps:
     - name: Checkout 🛎️
-      uses: actions/checkout@v3.5.3
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     - name: Build and Deploy 🚀
       uses: carry0987/honkit-publish-action@v1.0.0
 ```
