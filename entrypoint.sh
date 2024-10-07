@@ -44,6 +44,7 @@ cd - || exit
 npm install colors
 honkit init
 honkit build
+ls -al /honkit
 checkIfErr
 ls -al /honkit/_book
 checkIfErr
