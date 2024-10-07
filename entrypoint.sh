@@ -38,7 +38,7 @@ echo '[INFO] Start to build HonKit static files...'
 ls -alh
 mkdir -p /honkit
 chmod -R 777 /honkit
-cp -rvf "$BOOK_DIR"/* /honkit/
+cp -rf "$BOOK_DIR"/* /honkit/
 cd /honkit || exit
 ls -al
 checkIfErr
@@ -50,8 +50,9 @@ checkIfErr
 ls -al /honkit/_book
 checkIfErr
 mkdir -p "$BOOK_DIR"/_book
-cp -rvf /honkit/_book/* "$BOOK_DIR"/_book/
+cp -rf /honkit/_book/* "$BOOK_DIR"/_book/
 ls -al "$BOOK_DIR"
+realpath "$BOOK_DIR"
 cd - || exit
 echo '[INFO] Finished to build HonKit static files.'
 ls -al
