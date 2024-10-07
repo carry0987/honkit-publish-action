@@ -35,7 +35,9 @@ echo "pwd=[$(pwd)]"
 ###############
 echo '[INFO] Start to build HonKit static files...'
 
-ls -al
+ls -alh
+mkdir -p /honkit
+chmod -R 777 /honkit
 cp -rf "$BOOK_DIR"/* /honkit/
 cd /honkit || exit
 cd - || exit
