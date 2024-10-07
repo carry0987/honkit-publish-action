@@ -40,15 +40,14 @@ mkdir -p /honkit
 chmod -R 777 /honkit
 cp -rf "$BOOK_DIR"/* /honkit/
 cd /honkit || exit
-cd - || exit
 npm install colors
 honkit init
 honkit build
-ls -al /honkit
 checkIfErr
 ls -al /honkit/_book
 checkIfErr
 cp -rf /honkit/_book "$BOOK_DIR"/
+cd - || exit
 echo '[INFO] Finished to build HonKit static files.'
 ls -al
 
