@@ -49,7 +49,7 @@ pnpm honkit build
 checkIfErr
 ls -al /honkit/_book
 checkIfErr
-cp -rvf /honkit/_book "$BOOK_DIR"/
+cp -rvf /honkit/_book "$BOOK_DIR"/_book
 ls -al "$BOOK_DIR"
 cd - || exit
 echo '[INFO] Finished to build HonKit static files.'
