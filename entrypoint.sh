@@ -40,7 +40,9 @@ mkdir -p /honkit
 chmod -R 777 /honkit
 cp -rf "$BOOK_DIR"/* /honkit/
 cd /honkit || exit
-npm install colors
+ls -al
+checkIfErr
+npm install honkit
 honkit init
 honkit build
 checkIfErr
