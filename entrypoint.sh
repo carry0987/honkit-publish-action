@@ -52,7 +52,7 @@ checkIfErr
 mkdir -p "$BOOK_DIR"/_book
 cp -rf /honkit/_book/* "$BOOK_DIR"/_book/
 ls -al "$BOOK_DIR"
-realpath "$BOOK_DIR"
+BOOK_RESULT=$(realpath "$BOOK_DIR")
 cd - || exit
 echo '[INFO] Finished to build HonKit static files.'
 ls -al
@@ -78,7 +78,7 @@ cp -rf "$GH_PAGES_FOLDER"/.git ../dot_git_temp
 rm -rf "$GH_PAGES_FOLDER"
 mkdir -p "$GH_PAGES_FOLDER"
 cp -rf ../dot_git_temp "$GH_PAGES_FOLDER"/.git
-cp -rf "$OUTPUT_DIR"/* "$GH_PAGES_FOLDER"/
+cp -rf "$BOOK_RESULT"/_book/* "$GH_PAGES_FOLDER"/
 cd "$GH_PAGES_FOLDER" || exit
 ls -al
 
