@@ -42,9 +42,10 @@ cp -rf "$BOOK_DIR"/* /honkit/
 cd /honkit || exit
 ls -al
 checkIfErr
-npm install honkit
-honkit init
-honkit build
+pnpm add gitbook-plugin
+pnpm add honkit
+pnpm honkit init
+pnpm honkit build
 checkIfErr
 ls -al /honkit/_book
 checkIfErr
