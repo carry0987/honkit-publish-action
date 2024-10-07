@@ -41,7 +41,8 @@ chmod -R 777 /honkit
 cp -rf "$BOOK_DIR"/* /honkit/
 cd /honkit || exit
 cd - || exit
-npm install
+npm install colors
+honkit init
 honkit build
 checkIfErr
 ls -al /honkit/_book
